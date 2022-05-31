@@ -24,8 +24,13 @@ def main():
 	beginning()
 	amount_of_dices = get_dices()
 	amount_of_sides = get_sides()
+	numbers = []
 	for _ in range(amount_of_dices):
-		print(get_number(1, amount_of_sides), end=' ')
+		numbers.append(get_number(1, amount_of_sides))
+	if amount_of_sides != 6:
+		print(*numbers, sep=' ')
+	else:
+		six.six_sided(numbers)
 
 
 if __name__== "__main__":
