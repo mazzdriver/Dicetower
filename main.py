@@ -11,13 +11,24 @@ def get_number(start, stop):
 
 
 def get_sides():
-	sides = int(input(text.sides))
-	return sides
-
+	yes_side = False 
+	while not yes_side:
+		sides = input(text.sides)
+		if sides.isdigit() and int(sides) > 0:
+			yes_side = True
+		else:
+			print(text.num_need)
+	return int(sides)
 
 def get_dices():
-	dices = int(input(text.dices))
-	return dices
+	yes_dice = False 
+	while not yes_dice:
+		dices = input(text.dices)
+		if dices.isdigit() and int(dices) > 0:
+			yes_dice = True
+		else:
+			print(text.num_need)
+	return int(dices)
 	
 	
 def main():
