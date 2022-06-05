@@ -31,8 +31,7 @@ def get_dices():
 	return int(dices)
 	
 	
-def main():
-	beginning()
+def throw():
 	amount_of_dices = get_dices()
 	amount_of_sides = get_sides()
 	numbers = []
@@ -42,7 +41,24 @@ def main():
 		print(*numbers, sep=' ')
 	else:
 		six.six_sided(numbers)
+		print(*numbers, sep=' ')
 
+
+def try_again():
+	user_input = input(text.throw_again)
+	if 'y' in user_input.lower():
+		return True
+	else:
+		return False
+	
+	
+def main():
+	beginning()
+	ready = True
+	while ready:
+		throw()
+		ready = try_again()
 
 if __name__== "__main__":
     main()
+    
