@@ -36,8 +36,7 @@ def six_sided(numbers:list):
 		for num in numbers:
 			print(*sides[num-1][i], sep=' ', end='')
 		print()
-	
-		
+
 
 if __name__== "__main__":
-    six_sided([1, 2, 3, 4, 5, 6])
+	six_sided([1, 2, 3, 4, 5, 6])

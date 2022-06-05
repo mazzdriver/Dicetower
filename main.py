@@ -31,17 +31,15 @@ def get_dices():
 	return int(dices)
 	
 	
-def throw():
-	amount_of_dices = get_dices()
-	amount_of_sides = get_sides()
+def throw(amount_of_dices:int, amount_of_sides:int):
 	numbers = []
 	for _ in range(amount_of_dices):
 		numbers.append(get_number(1, amount_of_sides))
 	if amount_of_sides != 6:
-		print(*numbers, sep=' ')
+		return numbers
 	else:
 		six.six_sided(numbers)
-		print(*numbers, sep=' ')
+		return numbers
 
 
 def try_again():
@@ -56,7 +54,7 @@ def main():
 	beginning()
 	ready = True
 	while ready:
-		throw()
+		print(*(throw(get_dices(), get_sides())), sep=' ')
 		ready = try_again()
 
 if __name__== "__main__":
