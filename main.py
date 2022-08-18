@@ -11,25 +11,18 @@ def get_number(start, stop):
 
 
 def get_sides():
-	yes_side = False 
-	while not yes_side:
-		sides = input(text.sides)
-		if sides.isdigit() and int(sides) > 0:
-			yes_side = True
-		else:
-			print(text.num_need)
-	return int(sides)
+  while True:
+    sides = input(text.sides)
+    if sides.isdigit() and int(sides) > 0:
+      return int(sides)
+    print(text.num_need)
 
 def get_dices():
-	yes_dice = False 
-	while not yes_dice:
-		dices = input(text.dices)
-		if dices.isdigit() and int(dices) > 0:
-			yes_dice = True
-		else:
-			print(text.num_need)
-	return int(dices)
-	
+  while True:
+    dices = input(text.dices)
+    if dices.isdigit() and int(dices) > 0:
+      return int(dices)
+    print(text.num_need)	
 	
 def throw(amount_of_dices:int, amount_of_sides:int):
 	numbers = []
